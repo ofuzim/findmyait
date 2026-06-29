@@ -221,7 +221,7 @@ export const USMapComponent = memo(({
                 textAnchor="middle"
                 dominantBaseline="middle"
                 style={{
-                  fontFamily: "'Noto Sans', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: stateAbbr === 'TX' || stateAbbr === 'CA' || stateAbbr === 'MT' || stateAbbr === 'AK' ? '14px' : '12px',
                   fontWeight: isSelected ? '600' : '500',
                   fill: isSelected || isHovered ? '#ffffff' : '#1e293b',
