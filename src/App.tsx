@@ -22,7 +22,7 @@ import { DevToolsPanel } from "./components/DevToolsPanel";
 import SupabaseTestPage from "./components/SupabaseTestPage";
 import { LocalStorageAuth, LocalStorageHealthCheck } from "./utils/localStorage";
 import { Toaster } from "./components/ui/sonner";
-import { getCurrentPage, navigateToPage } from "./utils/router";
+import { getCurrentPage, getPathFromPage, navigateToPage } from "./utils/router";
 
 export default function App() {
   // Initialize currentPage from URL
@@ -206,7 +206,7 @@ export default function App() {
     
     // Update URL in background
     try {
-      const path = page.includes('?') ? `/${page.split('?')[0]}?${page.split('?')[1]}` : `/${page}`;
+      const path = getPathFromPage(page);
       window.history.pushState({ page }, '', path);
     } catch (error) {
       console.error('❌ URL update error:', error);

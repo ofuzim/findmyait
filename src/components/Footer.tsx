@@ -22,10 +22,16 @@ export function Footer({ onNavigate }: FooterProps) {
             <p className="text-gray-400 mb-6 max-w-md text-lg leading-relaxed">
               Streamline your journey into healthcare leadership. The bridge between where you are and where you want to be.
             </p>
-            <div className="bg-gradient-to-r from-green-900/30 to-blue-900/30 p-6 rounded-2xl border border-gray-700">
-              <p className="text-green-400 font-medium italic">
-                "We're operators, not outsiders."
-              </p>
+            <div className="flex space-x-3">
+              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-200">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-colors duration-200">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-200">
+                <Facebook className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
@@ -103,22 +109,6 @@ export function Footer({ onNavigate }: FooterProps) {
                 <span>Healthcare Leadership<br />United States</span>
               </li>
             </ul>
-            
-            {/* Social Links */}
-            <div className="mt-8">
-              <h4 className="text-white font-medium mb-4">Follow Us</h4>
-              <div className="flex space-x-3">
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-200">
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-colors duration-200">
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-200">
-                  <Facebook className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 
