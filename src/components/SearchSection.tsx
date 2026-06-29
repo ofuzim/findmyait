@@ -195,28 +195,37 @@ export function SearchSection({ onNavigate }: SearchSectionProps) {
   };
 
   return (
-    <section className="bg-gradient-to-br from-neutral-50 via-blue-50 to-indigo-50 py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="relative overflow-hidden py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(135deg, rgba(6, 21, 45, 0.82), rgba(24, 65, 109, 0.72)), url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=85&w=2200')",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      }}
+    >
+      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white/35 to-transparent pointer-events-none" />
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div 
-            className="inline-flex items-center px-4 py-2 rounded-full mb-6"
+            className="inline-flex items-center px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
             style={{
-              backgroundColor: 'color-mix(in srgb, var(--brand-primary) 10%, white)',
+              backgroundColor: 'rgba(255, 255, 255, 0.9)',
               color: 'var(--brand-primary)'
             }}
           >
             <Briefcase className="h-4 w-4 mr-2" />
             <span className="text-sm font-medium">Specialized Healthcare Opportunities</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl text-neutral-900 mb-6 font-semibold">
+          <h2 className="text-4xl lg:text-5xl text-white mb-6 font-semibold drop-shadow-sm">
             Find Your AIT <span className="brand-highlight-underline relative inline-block">Opportunity</span>
           </h2>
-          <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-sm">
             Discover Administrator in Training positions that match your career goals and location preferences.
           </p>
         </div>
         
-        <div className="bg-white rounded-2xl shadow-xl border border-neutral-100 p-8 max-w-4xl mx-auto">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/70 p-8 max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
             {/* Job search input with dropdown */}
             <div className="md:col-span-6 relative" ref={positionRef}>
